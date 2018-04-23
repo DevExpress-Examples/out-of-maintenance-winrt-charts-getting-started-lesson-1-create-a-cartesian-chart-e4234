@@ -1,0 +1,59 @@
+﻿<Page
+
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CartesianChart"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Charts="using:DevExpress.UI.Xaml.Charts"
+    x:Class="CartesianChart.MainPage"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+
+        <Charts:CartesianChart Margin="50">
+            <Charts:CartesianChart.Legend>
+                <Charts:Legend HorizontalPosition="Left" VerticalPosition="Top"/>
+            </Charts:CartesianChart.Legend>
+            <Charts:CartesianChart.Series>
+                <Charts:Series DisplayName="Illinois">
+                    <Charts:Series.View>
+                        <Charts:StackedBarSeriesView />
+                    </Charts:Series.View>
+                    <Charts:Series.Data>
+                        <Charts:DataPointCollection ArgumentScaleType="Qualitative">
+                            <Charts:DataPoint Argument="1998" Value="423.721"/>
+                            <Charts:DataPoint Argument="2001" Value="476.851"/>
+                            <Charts:DataPoint Argument="2004" Value="528.904"/>
+                        </Charts:DataPointCollection>
+                    </Charts:Series.Data>
+                </Charts:Series>
+                <Charts:Series DisplayName="Indiana">
+                    <Charts:Series.View>
+                        <Charts:StackedBarSeriesView />
+                    </Charts:Series.View>
+                    <Charts:Series.Data>
+                        <Charts:DataPointCollection ArgumentScaleType="Qualitative">
+                            <Charts:DataPoint Argument="1998" Value="178.719" />
+                            <Charts:DataPoint Argument="2001" Value="195.769" />
+                            <Charts:DataPoint Argument="2004" Value="227.271" />
+                        </Charts:DataPointCollection>
+                    </Charts:Series.Data>
+                </Charts:Series>
+                <Charts:Series DisplayName="Michigan" >
+                    <Charts:Series.View>
+                        <Charts:StackedBarSeriesView />
+                    </Charts:Series.View>
+                    <Charts:Series.Data>
+                        <Charts:DataPointCollection ArgumentScaleType="Qualitative">
+                            <Charts:DataPoint Argument="1998" Value="308.845" />
+                            <Charts:DataPoint Argument="2001" Value="335.793" />
+                            <Charts:DataPoint Argument="2004" Value="372.576" />
+                        </Charts:DataPointCollection>
+                    </Charts:Series.Data>
+                </Charts:Series>
+            </Charts:CartesianChart.Series>
+        </Charts:CartesianChart>
+
+    </Grid>
+</Page>
